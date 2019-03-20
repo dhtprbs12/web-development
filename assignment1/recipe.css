@@ -1,0 +1,80 @@
+/*
+Sekyun Oh
+CSC 337
+Assignment 1
+recipe.css
+
+Description:
+Theme for the pie.html.
+This designs the HTML tags and makes the web to be looked similar
+to specified appearance on the spec.
+This uses basic knowledge that we talked about in the class.
+Especially, this uses "id" and "class" selectors to apply different style on specific tags directly.
+Basically, I've used appropriate tag and style to make the web similar to the appearance.
+
+Furthermore, I've applied "pie bullet", "background", and "wide headings" as the extra feature.
+For the pie bullet, I've replaced every li tag of "second" div to pie image.
+For the background, I've used "background-image" property of body tag to apply background image
+However, for the wide headings, it works great except for the main headings.
+I need to set it to center and tried many things to make it center, but couldn't figure out.
+It would be great if somebody gives me feedback
+*/
+
+body{
+	background-color: white;
+	background-image: url("http://allisonobourn.com/337/spring19/homework/1/silverware.jpg");
+}
+
+.first > h1{
+	color: #A4A400;
+	background-color: #F0F0F0;
+	font-size: 22pt;
+	font-weight: bold;
+	text-align: center;
+	font-family: sans-serif;
+	text-decoration: underline;
+
+}
+
+.second > h1, .third > h1, .fourth > h1, .fifth > h1{
+	color: #A4A400;
+	background-color: #F0F0F0;
+	font-size: 18pt;
+	font-weight: normal;
+	text-align: left;
+	display: inline-block;
+	text-decoration: underline;
+}
+
+li, p {
+	font-family:sans-serif;
+	color: #404040;
+	font-size: 11pt;
+}
+
+pre{
+	font-family: monospace;
+	color: #404040;
+	font-size: 11pt;
+}
+
+a{
+	color: #A4A400;
+}
+
+abbr{
+	text-decoration: none;
+	border-bottom: 1px dotted;
+}
+
+.fourth > p{
+	background-color: #FFFFA8;
+	font-style: italic;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul {
+  list-style-image: url('http://allisonobourn.com/337/spring19/homework/1/pie-icon.gif');
+}

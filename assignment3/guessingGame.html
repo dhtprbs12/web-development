@@ -1,0 +1,53 @@
+<!--
+Sekyun Oh
+CSC 337
+Assignment 3
+guessingGame.html
+
+Created a HTML file that allows the user to play a guess a number game with the computer.
+Basically, this file provides a somewhat dynamic form of the page with input and button tag.
+However, the entire dynamic process will be generated through JavaScript file liked on this page.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="guessingGame.css" />
+		<script src="guessingGame.js" charset="utf-8"></script>
+		<title>Guess a Game Number</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Guess a Game Number</h1>
+			<div class="content_top">
+				<div class="paragraph">
+					<p>
+						Welcome to the CSC 337 guess a number game page! Enter a range into the boxes below and hit the start button to begin the game.
+					</p>
+				</div>
+				<div class="generator">
+					<span>
+						Minimum: <input type="text" id="min" value="1" />
+					</span>
+					<br />
+					<span>
+						Maximum: <input type="text" id="max" value="10" />
+						<button id="start" type="button">start</button>
+					</span>
+				</div>
+			</div>
+			<div class="content_bottom">
+				<div class="curr_guess">
+					<p>
+						Your Guess: <input type="text" id="current" />
+						<button id="guess" type="button">guess!</button>
+					</p>
+				</div>
+				<div class="prev_guess">
+					<p>Your previous guesses:</p>
+					<p id="previous"></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

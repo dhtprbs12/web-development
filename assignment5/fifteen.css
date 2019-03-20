@@ -1,0 +1,60 @@
+/*
+Sekyun Oh
+CSC 337
+Assignment 5
+fifteen.css
+
+Theme for the fifteen.html
+This designs the HTML tags and makes the web to be looked similar to specified appearance on the spec.
+This file is main file to position/layout html elements of "fifteen.html".
+*/
+
+body {
+	background-color: white;
+	font-family: sans-serif;
+	font-size: 14px;
+	text-align: center;
+}
+
+#controls {
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#puzzlearea {
+	font-size: 40pt;
+	width: 400px;
+	height: 400px;
+	padding: 0px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.puzzlepiece {
+	background-image: url(background.jpg);
+	border: 5px solid black;
+	height: 90px;
+	line-height: 100px;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	width: 90px;
+	cursor: default;
+}
+
+#movablepiece:hover {
+	color: red;
+	border: 5px solid red;
+	cursor: pointer;
+	background-image: url('background.jpg');
+}
+
+#w3c {
+	text-align: center;
+}
+
+#w3c img {
+	border: none;
+}

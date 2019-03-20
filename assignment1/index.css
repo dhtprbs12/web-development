@@ -1,0 +1,74 @@
+/*
+Sekyun Oh
+CSC 337
+Assignment 1
+index.css
+
+Description:
+Theme for index.html.
+Create an web page based on knowledge covered in the course.
+Set background to black for the simplicty.
+Basically, there are an header, three different divs horizontally, and buttons.
+There are more than 5 HTML tags and each states the knowledge that I've learned from the course.
+*/
+
+body{
+	background-color: black;
+	padding: 50px;
+}
+
+header{
+	color: white;
+}
+
+h1,h2{
+	text-align: center;
+}
+
+#flex_container{
+	display: flex;
+	border: 2px solid white;
+	justify-content: space-around;
+	align-items: center;
+	color: white;
+	height:350px;
+}
+
+#first img{
+	width: 200px;
+	height: 200px;
+	float: left;
+}
+
+#second p{
+	text-align: center;
+}
+
+#first, #second, #third{
+	overflow: auto;
+	height: 350px;
+	width: 33%;
+	border:  2px solid white;
+}
+
+#fourth{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.button{
+	border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#button1 {background-color: green;}
+#button2 {background-color: blue;}
+#button3 {background-color: red;}
+#button4 {background-color: gray;}
+#button5 {background-color: black}

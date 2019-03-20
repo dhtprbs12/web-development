@@ -1,0 +1,125 @@
+/*
+	Sekyun Oh
+	CSC 337
+	Assignment 2
+	movie.css
+
+	Theme for the tmnt.html
+	This designs the HTML tags and makes the web to be looked similar to specified appearance on the spec.
+	This file is main file to position/layout html elements of "tmnt.html" For the simplicty, named tags using only class.
+*/
+
+body{
+	font-size: 10pt;
+	margin: 0px;
+	font-family: sans-serif;
+	background-image: url("http://allisonobourn.com/images/moviebg.png");
+}
+
+.background_banner{
+	background-image: url("http://allisonobourn.com/images/rancidbannerbg.png");
+ 	background-repeat: repeat-x;
+	text-align: center;
+}
+
+.movie_name{
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+	font-family: sans-serif;
+	text-shadow: 3px 3px #999999;
+}
+
+.container{
+	box-shadow: 5px 5px 5px gray;
+	border-radius: 20px;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.main_content{
+	display: flex;
+}
+
+.left_section{
+	float:left;
+	width: 550px;
+	background-color: #EEEEEE;
+}
+
+.left_top{
+	background-image: url("http://allisonobourn.com/images/rottenlargebg.png");
+ 	background-repeat: repeat-x;
+	display: flex;
+}
+
+.left_top > div{
+	font-size: 48pt;
+	font-weight: bold;
+	color: red;
+}
+
+.left_middle{
+	background-color: #EEEEEE;
+	display: flex;
+	justify-content: space-around;
+	font-family: serif;
+}
+
+.left_middle_left, .left_middle_right{
+	width: 47%;
+}
+
+/* review */
+.left_middle_left  p, .left_middle_right  p{
+	background-color: #FFFFFF;
+	border: 2px #CCCCCC solid;
+	border-radius: 20px;
+	font-family: sans-serif;
+	font-size: 10pt;
+	padding: 8px;
+	overflow: hidden;/* for img fit */
+}
+
+/* 5px separating img form text to its right */
+.left_middle img{
+ float: left;
+ margin-right: 5px;
+}
+
+/* personal info */
+.left_middle_left  div, .left_middle_right  div{
+	margin-bottom: 20pt;
+}
+
+.right_section{
+	float:right;
+	width: 250px;
+	background-color: #A2B964;
+	font-size: 10pt;
+	font-family: serif;
+}
+
+dl{
+	margin-left: 10pt;
+	font-size: 10pt;
+	font-family: serif;
+}
+
+dt{
+	font-weight: bold;
+	margin-top: 10pt;
+}
+
+.bottom_section{
+	padding-top: 5px;
+	text-align: center;
+	height: 20px;
+	background-color: #A2B964;
+}
+
+.validator{
+	float: right;
+}

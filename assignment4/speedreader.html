@@ -1,0 +1,69 @@
+<!--
+Sekyun Oh
+CSC 337
+Assignment 4
+speedreader.html
+
+Created a HTML file that allows the user to improve a reading skill.
+Basically, this file provides a somewhat dynamic form of the page with input, button, and select tags.
+However, the entire dynamic process will be generated through JavaScript file linked on this page.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="speedreader.css" />
+		<script src="speedreader.js" charset="utf-8"></script>
+		<title>SpeedReader</title>
+	</head>
+	<body>
+		<h1>Speed Reader</h1>
+		<div id="top"></div>
+		<div class="bottom">
+			<div class="labels">
+				<div>
+					<p>Play Controls:</p>
+					<button id="start" type="button" name="start">start</button>
+					<button id="stop" type="button" name="stop" disabled>stop</button>
+				</div>
+				<div>
+					<p>Speed:</p>
+					<select id="select" class="select" name="select">
+						<option value="500">50 wpm</option>
+						<option value="200">300 wpm</option>
+						<option value="171" selected="selected">350 wpm</option>
+						<option value="150">400 wpm</option>
+						<option value="133">450 wpm</option>
+						<option value="120">500 wpm</option>
+					</select>
+				</div>
+				<div>
+					<p>Size:</p>
+					<input id="medium" type="radio" name="radio" value="36pt" checked="checked" />Medium
+					<input id="big" type="radio" name="radio" value="48pt" />Big
+					<input id="bigger" type="radio" name="radio" value="60pt" />Bigger
+				</div>
+			</div>
+			<div>
+				<p>Input Text</p>
+				<textarea id="textarea" name="textarea" rows="10" cols="80"></textarea>
+			</div>
+		</div>
+		<br />
+		<br />
+		<div class="validators">
+			<div>
+				<a href="https://validator.w3.org/check/referer">
+					<img src="http://allisonobourn.com/images/w3c-html-blue.png" alt="html_picture" />
+				</a>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer">
+					<img src="http://allisonobourn.com/images/w3c-css-blue.png" alt="css_picture" />
+				</a>
+				<a href="https://webster.cs.washington.edu/jslint/?referer">
+					<img src="http://allisonobourn.com/images/w3c-js-blue.png" alt="js_picture" />
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

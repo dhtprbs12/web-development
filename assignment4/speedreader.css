@@ -1,0 +1,63 @@
+/*
+Sekyun Oh
+CSC 337
+Assignment 4
+speedreader.css
+
+Theme for the speedreader.html
+This designs the HTML tags and makes the web to be looked similar to specified appearance on the spec.
+This file is main file to position/layout html elements of "speedreader.html".
+*/
+
+body{
+	background-color: #EAF6F6;
+	font-size: 12pt;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+#top{
+	overflow: hidden;
+	width: 80%;
+	height: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 36pt;
+	font-weight: bold;
+	font-family: monospace;
+	border: 2px solid #8EBEBE;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	line-height: 100px;
+}
+
+.bottom{
+	display: inline-block;
+}
+
+.bottom p{
+	text-align: left;
+	padding-bottom: 2px;
+	border-bottom: 1px solid #8EBEBE;
+}
+
+.labels{
+	display: flex;
+	justify-content: space-around;
+}
+
+button{
+	background-color: white;
+	border: 1px solid gray;
+	width:70px;
+}
+
+.textarea{
+	border: 1px solid gray;
+	background-color: #FFFFFF;
+}
+
+.validators{
+	text-align: left;
+	margin: 5px;
+}
