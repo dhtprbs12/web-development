@@ -1,0 +1,56 @@
+/*
+Sekyun Oh
+CSC 337
+Assignment 8
+03/29/2019
+chatit.css
+
+Theme for the chatit.html
+This designs the HTML tags and makes the web to be looked better.
+*/
+
+body h1:hover, #post:hover{
+	background-color: black;
+	color:white;
+}
+
+.input{
+	width:10%;
+	background-color: blue;
+}
+
+.input:hover{
+	width:20%;
+	background-color: yellow;
+}
+
+li p, #comment-span, #name-span{
+	font-weight: bold;
+}
+
+#name-input:hover, #comment-input:hover{
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+
+li span{
+	font-weight: normal;
+}
+
+li{
+	border: 2px dotted red;
+}
+
+li:hover{
+	background-color: yellow;
+}
+
+#empty, #response, #error{
+	color: red;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#comments{
+	border: 3px solid black;
+}

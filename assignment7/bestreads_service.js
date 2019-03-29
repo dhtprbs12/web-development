@@ -9,41 +9,44 @@ This JavaScript code interacts with gerrymandering.js to send
 data in HTML.
 */
 
+/* global require */
+'use strict';
+
 const express = require("express");
 const app = express();
-var fs = require('fs');
+let fs = require('fs');
 app.use(express.static('public'));
 
 // main url function
 app.get('/', function(req,res){
 	res.header("Access-Control-Allow-Origin", "*");
-	var mode = req.query.mode;
-	var folder = req.query.title;
+	let mode = req.query.mode;
+	let folder = req.query.title;
 
 	// when page loads, list books
 	if(mode == 'books') {
 		let arr = [];
 		fs.readdir(__dirname+'/books', function(err, folders){
 			folders.forEach(function(folder){
-				arr.push(build_books_json(folder));
-			})
+				arr.push(buildBooksJson(folder));
+			});
 			let jsonBooks = JSON.stringify({'books':arr});
 			res.send(jsonBooks);
-		})
+		});
 	}
 	// when user clicks a specific book, show detail
 	else{
 		res.send(readFiles(folder,mode));
 	}
-})
+});
 
 /**
-build_books_json(folder)
+buildBooksJson(folder)
 
 This function reads info.txt of chosen book
 and create json based upon the data from the file.
 **/
-function build_books_json(folder){
+function buildBooksJson(folder){
 	let info = fs.readFileSync(__dirname+'/books/'+folder+'/info.txt', 'utf8');
 	let title = info.split('\n')[0];
 	let json = {'title':title,'folder':folder};
@@ -61,7 +64,7 @@ function readFiles(folder, mode){
 	// when mode is info
 	if(mode == 'info'){
 		let info = fs.readFileSync(__dirname+'/books/'+folder+'/info.txt', 'utf8').split('\n');
-		let object = {'title':info[0],'author':info[1],'stars':info[2]}
+		let object = {'title':info[0],'author':info[1],'stars':info[2]};
 		data = JSON.stringify(object);
 	}
 	// when mode is description
@@ -73,9 +76,9 @@ function readFiles(folder, mode){
 	else{
 		let arr = [];
 		let files = fs.readdirSync(__dirname+'/books/'+folder);
-		for (var i = 0; i < files.length; i++) {
+		for (let i = 0; i < files.length; i++) {
 			if(files[i].indexOf('review') >= 0){
-				let review = fs.readFileSync(__dirname+'/books/'+folder+'/'+files[i], 'utf8').split('\n');
+				let review = fs.readFileSync(__dirname+'/books/'+folder+'/'+files[i],'utf8').split('\n');
 				let object = {'name':review[0], 'stars':review[1], 'review':review[2]};
 				arr.push(object);
 			}
@@ -88,4 +91,4 @@ function readFiles(folder, mode){
 // listen connection on 3000 PORT
 app.listen(3000,function(){
 	console.log('Web Service Started!');
-})
+});

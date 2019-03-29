@@ -52,7 +52,7 @@ data from the server.
 		.then(checkStatus)
 		.then(function(responseText) {
 			let books = JSON.parse(responseText)['books'];
-			var i;
+			let i;
 			for(i = 0; i < books.length; i++){
 				let book = books[i];
 				let img = document.createElement('img');
@@ -61,7 +61,7 @@ data from the server.
 				p.innerHTML = book['title'];
 				let div = document.createElement('div');
 				div.id = book['title'];
-				div.className = book['folder']
+				div.className = book['folder'];
 				div.onclick = bookDetail;
 				div.appendChild(img);
 				div.appendChild(p);
@@ -70,7 +70,7 @@ data from the server.
 		})
 		.catch(function(error) {
 			// error: do something with error
-			showError(error,' while fetching books');
+			console.log(error,' while fetching books');
 		});
 	}
 
@@ -106,7 +106,7 @@ data from the server.
 		})
 		.catch(function(error) {
 			// error: do something with error
-			showError(error,' while fetching info');
+			console.log(error,' while fetching info');
 		});
 	}
 
@@ -126,7 +126,7 @@ data from the server.
 		})
 		.catch(function(error) {
 			// error: do something with error
-			showError(error,' while fetching description');
+			console.log(error,' while fetching description');
 		});
 	}
 
@@ -145,7 +145,7 @@ data from the server.
 
 			let reviews = json['reviews'];
 			console.log(reviews);
-			var i;
+			let i;
 			for(i = 0; i < reviews.length; i++){
 				let star = reviews[i]['stars'];
 				let name = reviews[i]['name'];
@@ -164,7 +164,7 @@ data from the server.
 		})
 		.catch(function(error) {
 			// error: do something with error
-			showError(error,' while fetching reviews');
+			console.log(error,' while fetching reviews');
 		});
 	}
 
@@ -181,7 +181,7 @@ data from the server.
 			return response.text();
 		}
 		else if(response.status == 410){
-			return Promise.reject(new Error('Something went wrong while communication with the server'));
+			return Promise.reject(new Error('Something went wrong in the server'));
 		}
 		else{
 			return Promise.reject(new Error(response.status+":"+response.statusText));
